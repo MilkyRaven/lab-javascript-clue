@@ -116,11 +116,21 @@ function selectRandom(array) {
     let randomIndex = Math.floor(Math.random() * array.length);
     return randomSuspect = array[randomIndex];
 }
-console.log(selectRandom(suspectsArray));
-function pickMystery() {}
+    let randomSuspect = selectRandom(suspectsArray);
+    let randomWeapon = selectRandom(weaponsArray);
+    let randomRoom = selectRandom(roomsArray);
+    console.log(randomRoom);
 
+    function pickMystery() {
+        let pickedMystery = {};
+        pickedMystery.suspect = randomSuspect;
+        pickedMystery.weapon = randomWeapon;
+        pickedMystery.room = randomRoom;
+        return pickedMystery;
+    }
 
 // ITERATION 3
 
-function revealMystery() {}
-
+function revealMystery(pickedMystery) {
+    //return `${pickMystery.randomSuspect.fistName} ${pickMystery.randomSuspect.lastName} killed Mr. Boddy using the ${pickMystery.randomWeapon.name}  in the ${pickMystery.randomSuspect.fistName} !`
+}
